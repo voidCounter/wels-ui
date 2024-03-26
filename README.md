@@ -1,4 +1,4 @@
-# Prerequisite
+## Prerequisite
 
 1. Ensure that you have [shadcn](https://ui.shadcn.com) installed in your project. If not, Follow the installation instruction [here](https://ui.shadcn.com/docs/installation).
 2. Copy the theming information in the global css file. (updated)
@@ -122,7 +122,7 @@ module.exports = {
 };
 ```
 
-# Installation
+## Installation
 
 1. Navigate to your project directory, preferably the `src` or `app` folder.
 
@@ -168,6 +168,15 @@ import ProgressStep from "@/wels-components/ProcedureProgress/ProgressStep";
 
 Here is the component:
 ![image](images/order_processing_progress.png)
+
+## Updating
+
+When updating the submodule, navigate into the submodule directory (`wels-components`) and execute `git pull` to fetch the latest changes from the remote repository:
+
+```bash
+cd wels-components
+git pull
+```
 
 ## Contributing
 
