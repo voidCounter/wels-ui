@@ -57,7 +57,11 @@ export const ProgressStep = ({
                     {serialNo}
                 </div>
             </div>
-            <div className="flex flex-row gap-4 items-center pl-10 py-4">
+            <div
+                className={`flex flex-row gap-4 items-center ${
+                    icon ? 'pl-10' : 'pl-4'
+                } py-6`}
+            >
                 <div
                     className={`${statusColor[status].background} ${
                         icon ? 'p-4' : ''
@@ -85,7 +89,11 @@ export const ProgressStep = ({
                     {serialNo}
                 </div>
             </div>
-            <div className="flex flex-col gap-4 items-center w-full pt-10 px-4">
+            <div
+                className={`flex flex-col gap-4 items-center w-full ${
+                    icon ? 'pt-10' : 'pt-4'
+                } px-6`}
+            >
                 <div
                     className={`${statusColor[status].background} ${
                         icon ? 'p-4' : ''

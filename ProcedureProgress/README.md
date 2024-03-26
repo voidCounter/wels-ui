@@ -2,7 +2,7 @@
 
 The `ProcedureProgress` component displays a series of progress steps in either a vertical or horizontal layout.
 
-**Props:**
+### Props:
 
 | Name       | Type                       | Default    | Description                                                                  | Required |
 | ---------- | -------------------------- | ---------- | ---------------------------------------------------------------------------- | -------- |
@@ -10,7 +10,35 @@ The `ProcedureProgress` component displays a series of progress steps in either 
 | showSerial | `boolean`                  | `true`     | Determines whether to show the serial numbers for the progress steps.        | Optional |
 | children   | `React.ReactNode`          |            | The progress steps to be displayed inside the `ProcedureProgress` component. | Required |
 
-**Example Usage:**
+### Example Usage:
+
+```jsx
+<ProcedureProgress showSerial={true} direction="vertical">
+	<ProgressStep status="approved" icon={<Check />}>
+		Submitted
+	</ProgressStep>
+	<ProgressStep status="approved" icon={<Building />}>
+		Department of Computer Science and Engineering
+	</ProgressStep>
+	<ProgressStep status="processing" icon={<TowerControl />}>
+		Provost
+	</ProgressStep>
+	<ProgressStep status="waiting" icon={<BookText />}>
+		Accounts Office
+	</ProgressStep>
+	<ProgressStep status="waiting" icon={<Banknote />}>
+		Bank
+	</ProgressStep>
+	<ProgressStep status="waiting" icon={<FilePenLine />}>
+		Exam Controller Office
+	</ProgressStep>
+</ProcedureProgress>
+</div>
+```
+
+![example1](../images/order_processing_progress.png)
+
+---
 
 ```jsx
 import { ProcedureProgress, ProgressStep } from "./components";
@@ -21,6 +49,10 @@ import { ProcedureProgress, ProgressStep } from "./components";
     <ProgressStep status="waiting">Step 3: Waiting for User Input</ProgressStep>
 </ProcedureProgress>;
 ```
+
+<div align="center">
+  <img src="../images/procedureProgress2.png" alt="Procedure Progress with Vertical Layout" />
+</div>
 
 ## ProgressStep Component
 
