@@ -73,7 +73,7 @@
 }
 ```
 
-3. Add the following to the tsconfig.json file. If the file does not exist, create it.
+3. Add the following in the `tsconfig.json` file. If the file does not exist, create it. In nextjs, `"jsx": "preserve"` will work fine. The `jsx` property specifies how TypeScript should handle JSX syntax in TypeScript files.
 
 ```json
 {
@@ -83,6 +83,43 @@
         // ....
     }
 }
+```
+
+4. Update the `tailwind.config.js` file.
+
+```js
+module.exports = {
+    // ...
+    content: [
+        // ...
+        "./location/to/the/submodule/**/*.{ts,tsx}",
+        // ...
+    ],
+    // ...
+    theme: {
+        container: {
+            center: true,
+            padding: "2rem",
+            screens: {
+                "2xl": "1400px",
+            },
+        },
+        extend: {
+            colors: {
+                // ...
+                success: {
+                    DEFAULT: "hsl(var(--success))",
+                    foreground: "hsl(var(--success-foreground))",
+                },
+                warning: {
+                    DEFAULT: "hsl(var(--warning))",
+                    foreground: "hsl(var(--warning-foreground))",
+                },
+                // ...
+            },
+        },
+    },
+};
 ```
 
 # Installation
