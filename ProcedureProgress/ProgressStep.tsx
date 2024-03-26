@@ -1,6 +1,6 @@
 import * as React from 'react';
 interface Props {
-    icon: null | React.ReactElement;
+    icon?: null | React.ReactElement;
     status: 'approved' | 'waiting' | 'processing' | 'cancelled';
     serialNo?: string;
     direction?: 'vertical' | 'horizontal';
@@ -25,13 +25,17 @@ const statusColor = {
     },
 };
 
-/** A component that displays a progress step.
+/**
+ * ProgressStep Component
+ *
+ * This component represents a single step in a progress indicator.
+ *
  * @component
- * @param {object} props - The component props.
- * @param {string} [props.serialNo] - The serial number of the step.
- * @param {string} [props.status="processing"] - The status of the step.
- * @param {React.ReactNode} props.children - Write the name of the step.
- * @returns {JSX.Element} - The rendered component.
+ * @param {object} props - The props for the ProgressStep component.
+ * @param {string} [props.serialNo] - The serial number associated with the step.
+ * @param {string} [props.status="processing"] - The status of the step. Possible values: "approved", "waiting", "processing", "cancelled".
+ * @param {React.ReactNode} props.children - The content to be displayed within the progress step.
+ * @returns {JSX.Element} - The rendered ProgressStep component.
  */
 
 export const ProgressStep = ({
@@ -55,7 +59,9 @@ export const ProgressStep = ({
             </div>
             <div className="flex flex-row gap-4 items-center pl-10 py-4">
                 <div
-                    className={`${statusColor[status].background} p-4 flex justify-center items-center rounded-full`}
+                    className={`${statusColor[status].background} ${
+                        icon ? 'p-4' : ''
+                    } flex justify-center items-center rounded-full`}
                 >
                     {icon &&
                         React.cloneElement(icon, {
@@ -81,7 +87,9 @@ export const ProgressStep = ({
             </div>
             <div className="flex flex-col gap-4 items-center w-full pt-10 px-4">
                 <div
-                    className={`${statusColor[status].background} p-4 flex justify-center items-center rounded-full`}
+                    className={`${statusColor[status].background} ${
+                        icon ? 'p-4' : ''
+                    } flex justify-center items-center rounded-full`}
                 >
                     {icon &&
                         React.cloneElement(icon, {

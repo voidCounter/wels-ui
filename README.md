@@ -78,10 +78,25 @@
 ```json
 {
     "compilerOptions": {
-        // ....
-        "jsx": "react-jsx"
-        // ....
-    }
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        // to check js files
+        // "checkJs": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+        /* Bundler mode */
+        "moduleResolution": "Node",
+        "noEmit": true,
+        "jsx": "preserve",
+
+        /* resolving paths */
+        // Modify based on your setup
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["."]
 }
 ```
 
