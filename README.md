@@ -73,7 +73,7 @@
 }
 ```
 
-3. Add the following in the `tsconfig.json` file. If the file does not exist, create it. In nextjs, `"jsx": "preserve"` will work fine. The `jsx` property specifies how TypeScript should handle JSX syntax in TypeScript files.
+3. Add the following in the `tsconfig.json` file. If the file does not exist, create it. The `jsx` property specifies how TypeScript should handle JSX syntax in TypeScript files.
 
 ```json
 {
@@ -153,7 +153,7 @@ git submodule add https://github.com/voidCounter/wels-ui.git wels-components
 
 ## Usage
 
-Let's use the `ProcedureProgress` component.
+Let's use the `ProcedureProgress` component. Detailed documentation and usage of this component is provided [here](https://github.com/voidCounter/wels-ui/tree/main/ProcedureProgress).
 
 ```jsx
 import ProcedureProgress from "@/wels-components/ProcedureProgress/ProcedureProgress";
@@ -186,7 +186,7 @@ Here is the component:
 
 ## Updating
 
-When updating the submodule, navigate into the submodule directory (`wels-components`) and execute `git pull` to fetch the latest changes from the remote repository:
+To update the submodule, navigate into the submodule directory (`wels-components`) and execute `git pull` to fetch the latest changes from the remote repository:
 
 ```bash
 cd wels-components
@@ -195,4 +195,4 @@ git pull
 
 ## Contributing
 
-Pull requests are welcome. Please open an issue first to discuss what you would like to change. More info will be added later.
+If you have an idea or found a bug, please open an [issue](https://github.com/voidCounter/wels-ui/issues). More detailed guidelines for contributing will be added soon.
