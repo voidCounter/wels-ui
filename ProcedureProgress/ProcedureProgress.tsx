@@ -24,13 +24,25 @@ export const ProcedureProgress = ({
     showSerial = true,
     children,
 }: Props): JSX.Element => {
+    const [inMobile, setInMobile] = React.useState(false);
+    React.useEffect(() => {
+        const checkMobile = () => {
+            if (window.innerWidth < 768) setInMobile(true);
+            else setInMobile(false);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+        };
+    });
     const renderedSteps = React.Children.map(children, (child, index) => {
         if (React.isValidElement(child) && child.type == ProgressStep) {
             const serialNo = showSerial ? `${index + 1}` : '';
             return React.cloneElement(child, {
                 ...child.props,
                 serialNo: serialNo,
-                direction: direction,
+                direction: inMobile ? 'vertical' : direction,
             });
         }
         return null;
@@ -38,7 +50,7 @@ export const ProcedureProgress = ({
     return (
         <div
             className={`flex ${
-                direction == 'vertical' ? 'flex-col' : 'flex-row'
+                inMobile || direction == 'vertical' ? 'flex-col' : 'flex-row'
             } items-start`}
         >
             {renderedSteps}

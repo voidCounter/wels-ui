@@ -4,15 +4,28 @@ The `ProcedureProgress` component displays a series of progress steps in either 
 
 ### Props:
 
-| Name       | Type                       | Default    | Description                                                                  | Required |
-| ---------- | -------------------------- | ---------- | ---------------------------------------------------------------------------- | -------- |
-| direction  | `vertical` \| `horizontal` | `vertical` | The direction of the progress steps. Can be `"vertical"` or `"horizontal"`.  | Optional |
-| showSerial | `boolean`                  | `true`     | Determines whether to show the serial numbers for the progress steps.        | Optional |
-| children   | `React.ReactNode`          |            | The progress steps to be displayed inside the `ProcedureProgress` component. | Required |
+| Name       | Type                       | Default    | Description                                                                                                                                                         | Required |
+| ---------- | -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| direction  | `vertical` \| `horizontal` | `vertical` | The direction of the progress steps. Can be `"vertical"` or `"horizontal"`. _On Mobile devices, it's forced to have `"vertical"` value to enhance user experience._ | Optional |
+| showSerial | `boolean`                  | `true`     | Determines whether to show the serial numbers for the progress steps.                                                                                               | Optional |
+| children   | `React.ReactNode`          |            | The progress steps to be displayed inside the `ProcedureProgress` component.                                                                                        | Required |
 
 ### Example Usage:
 
+Make sure you've installed the [Lucide-icon](https://lucide.dev/icons/) package.
+
 ```jsx
+import { ProcedureProgress } from './wels-components/ProcedureProgress/ProcedureProgress';
+import { ProgressStep } from './wels-components/ProcedureProgress/ProgressStep';
+import {
+    Banknote,
+    BookText,
+    Building,
+    Check,
+    FilePenLine,
+    TowerControl,
+} from 'lucide-react';
+
 <ProcedureProgress showSerial={true} direction="vertical">
 	<ProgressStep status="approved" icon={<Check />}>
 		Submitted
