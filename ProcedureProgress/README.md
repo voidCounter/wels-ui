@@ -54,7 +54,8 @@ import {
 ---
 
 ```jsx
-import { ProcedureProgress, ProgressStep } from "./components";
+import { ProcedureProgress } from './wels-components/ProcedureProgress/ProcedureProgress';
+import { ProgressStep } from './wels-components/ProcedureProgress/ProgressStep';
 
 <ProcedureProgress direction="horizontal" showSerial={false}>
     <ProgressStep status="approved">Step 1: Approval</ProgressStep>

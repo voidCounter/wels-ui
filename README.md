@@ -157,8 +157,8 @@ git submodule add https://github.com/voidCounter/wels-ui.git wels-components
 Let's use the `ProcedureProgress` component. Detailed documentation and usage of this component is provided [here](https://github.com/voidCounter/wels-ui/tree/main/ProcedureProgress).
 
 ```jsx
-import ProcedureProgress from "@/wels-components/ProcedureProgress/ProcedureProgress";
-import ProgressStep from "@/wels-components/ProcedureProgress/ProgressStep";
+import {ProcedureProgress} from "@/wels-components/ProcedureProgress/ProcedureProgress";
+import {ProgressStep} from "@/wels-components/ProcedureProgress/ProgressStep";
 
 <ProcedureProgress showSerial={true} direction="horizontal">
     <ProgressStep status="approved" icon={<Check />}>
