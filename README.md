@@ -140,6 +140,8 @@ module.exports = {
 
 ## Installation
 
+Here is the process to add this submodule in your existing codebase.
+
 1. Navigate to your project directory, preferably the `src` or `app` folder.
 
 ```bash
@@ -150,6 +152,38 @@ cd path/to/your/project/src
 
 ```bash
 git submodule add https://github.com/voidCounter/wels-ui.git wels-components
+git submodule init
+```
+
+## Cloning a project containing this submodule
+
+When you clone a repository that contains submodules, the submodules are not automatically initialized and updated by default. You need to perform some additional steps to fetch the submodule content.
+Here's what you need to do:
+
+1. Clone the main repository
+
+```bash
+git clone https://github.com/jhondoe/project.git
+```
+
+2. Navigate into the repository's directory and run the following command to initialize the submodules:
+
+```bash
+git submodule init
+```
+
+This command sets up the `.gitmodules` file in your local repository, which maps the submodule paths to their respective remote repositories.
+
+3. Fetch the actual content of the submodules from their respective remote repositories.
+
+```bash
+git submodule update
+```
+
+Alternatively, you can combine steps 2 and 3 into a single command:
+
+```bash
+git submodule update --init
 ```
 
 ## Usage
@@ -157,8 +191,16 @@ git submodule add https://github.com/voidCounter/wels-ui.git wels-components
 Let's use the `ProcedureProgress` component. Detailed documentation and usage of this component is provided [here](https://github.com/voidCounter/wels-ui/tree/main/ProcedureProgress).
 
 ```jsx
-import {ProcedureProgress} from "@/wels-components/ProcedureProgress/ProcedureProgress";
-import {ProgressStep} from "@/wels-components/ProcedureProgress/ProgressStep";
+import { ProcedureProgress } from "@/wels-components/ProcedureProgress/ProcedureProgress";
+import { ProgressStep } from "@/wels-components/ProcedureProgress/ProgressStep";
+import {
+    Banknote,
+    BookText,
+    Building,
+    Check,
+    FilePenLine,
+    TowerControl,
+} from "lucide-react";
 
 <ProcedureProgress showSerial={true} direction="horizontal">
     <ProgressStep status="approved" icon={<Check />}>
@@ -185,12 +227,13 @@ import {ProgressStep} from "@/wels-components/ProcedureProgress/ProgressStep";
 Here is the component:
 ![image](images/order_processing_progress.png)
 
-## Updating
+## Updating to the recent changes
 
-To update the submodule, navigate into the submodule directory (`wels-components`) and execute `git pull` to fetch the latest changes from the remote repository:
+To update the submodule, navigate into the submodule directory (`wels-components`) and checkout the branch you want to update, execute `git pull` to fetch the latest changes from the remote repository:
 
 ```bash
 cd wels-components
+git checkout main
 git pull
 ```
 
