@@ -15,8 +15,8 @@ The `ProcedureProgress` component displays a series of progress steps in either 
 Make sure you've installed the [Lucide-icon](https://lucide.dev/icons/) package.
 
 ```jsx
-import { ProcedureProgress } from './wels-components/ProcedureProgress/ProcedureProgress';
-import { ProgressStep } from './wels-components/ProcedureProgress/ProgressStep';
+import { ProcedureProgress } from '@/wels-components/ProcedureProgress/ProcedureProgress';
+import { ProgressStep } from '@/wels-components/ProcedureProgress/ProgressStep';
 import {
     Banknote,
     BookText,
@@ -54,8 +54,8 @@ import {
 ---
 
 ```jsx
-import { ProcedureProgress } from './wels-components/ProcedureProgress/ProcedureProgress';
-import { ProgressStep } from './wels-components/ProcedureProgress/ProgressStep';
+import { ProcedureProgress } from "./wels-components/ProcedureProgress/ProcedureProgress";
+import { ProgressStep } from "./wels-components/ProcedureProgress/ProgressStep";
 
 <ProcedureProgress direction="horizontal" showSerial={false}>
     <ProgressStep status="approved">Step 1: Approval</ProgressStep>

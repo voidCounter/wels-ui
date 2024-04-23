@@ -23,7 +23,7 @@ git pull
 2. Add Shadcn components:
 
 ```bash
-npx shadcn-ui@latest button add calendar popover input label
+npx shadcn-ui@latest add button calendar popover input label
 ```
 
 ## Parameters
@@ -38,6 +38,7 @@ npx shadcn-ui@latest button add calendar popover input label
 ```js
 import React, { useState } from "react";
 import { DateTimePicker } from "./DateTimePicker";
+import { DateTimePicker } from "@/wels-components/DateTimePicker/DateTimePicker";
 
 const App = () => {
     const [date, setDate] = useState(new Date());
