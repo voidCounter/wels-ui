@@ -4,7 +4,13 @@ The DateTimePicker component is a React component that allows users to select a 
 
 ## Prerequisites
 
-Make sure you've added this repository as submodule in your codebase. Follow [this](https://github.com/voidCounter/wels-ui?tab=readme-ov-file#prerequisite) to do so.
+Make sure you've added this repository as submodule in your codebase. Follow [this](https://github.com/voidCounter/wels-ui?tab=readme-ov-file#prerequisite) to do so. If you have done already, then just pull the changes:
+
+```bash
+cd wels-components
+git checkout main
+git pull
+```
 
 ### Dependencies
 
@@ -52,3 +58,7 @@ const App = () => {
 
 export default App;
 ```
+
+<div align="center">
+  <img src="../images/DateTimePicker.png" alt="DateTimePicker" />
+</div>
