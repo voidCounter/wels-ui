@@ -6,6 +6,8 @@ The DateTimePicker component is a React component that allows users to select a 
 
 Make sure you've added this repository as submodule in your codebase. Follow [this](https://github.com/voidCounter/wels-ui?tab=readme-ov-file#prerequisite) to do so.
 
+### Dependencies
+
 1. `luxon`: For managing dates and times, `react-day-picker` , `lucide-react` for using icons.
 
 ```bash
